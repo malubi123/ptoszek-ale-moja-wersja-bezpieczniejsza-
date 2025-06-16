@@ -1,0 +1,1 @@
+# ptoszek-ale-moja-wersja-bezpieczniejsza-
