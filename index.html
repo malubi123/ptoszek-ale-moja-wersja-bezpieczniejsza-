@@ -1,75 +1,37 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#000000" />
-<title>Projekt Edukacyjny - Zgoda</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0; padding: 0;
-    background: #222;
-    color: #eee;
-  }
-  #consentModal {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  #consentBox {
-    background: #333;
-    padding: 20px 30px;
-    border-radius: 8px;
-    max-width: 400px;
-    text-align: center;
-  }
-  #consentBox h1 {
-    margin-bottom: 1em;
-  }
-  #consentBox p {
-    font-size: 14px;
-    margin-bottom: 1.5em;
-  }
-  #acceptBtn {
-    padding: 10px 25px;
-    font-size: 16px;
-    background-color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-  }
-  #acceptBtn:hover {
-    background-color: #45a049;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spokojna strona</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+      background-color: #f0f0f0;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 0.3rem;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
+  <h1>Witamy na spokojnej stronie</h1>
+  <p>Kliknij poniższy przycisk, aby uruchomić tryb paniki (dla celów edukacyjnych!)</p>
+  <button id="startPanicBtn">Uruchom Tryb Paniki</button>
 
-<div id="consentModal">
-  <div id="consentBox">
-    <h1>Zgoda na działanie strony</h1>
-    <p>
-      Ta strona używa różnych funkcji eksperymentalnych, które mogą zmieniać zachowanie przeglądarki.
-      Klikając "Zgadzam się", wyrażasz zgodę na ich uruchomienie w celach edukacyjnych.
-    </p>
-    <button id="acceptBtn">Zgadzam się</button>
-  </div>
-</div>
-
-<script src="index.js"></script>
-<script>
-  document.getElementById('acceptBtn').addEventListener('click', () => {
-    if (typeof acceptConsent === 'function') {
-      acceptConsent();
-    }
-  });
-</script>
-
+  <script src="index.js"></script>
 </body>
 </html>
